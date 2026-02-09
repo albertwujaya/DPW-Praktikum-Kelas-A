@@ -18,7 +18,11 @@
 
 1. Denah lokasi
 
-2. foto mempelai
+2. nama Penerima
+
+3. foto mempelai
+
+4. kata pengantar
 
 #Halaman ketiga
 
@@ -38,4 +42,4 @@
 
 8. foto mempelai
 
-9. nama orang yang diundang
+9. nama keluarga
