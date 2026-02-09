@@ -2,7 +2,7 @@
 
 #Halaman Depan
 
-1.Judul acara
+1. Judul acara
 
 
 2. Nama mempelai
@@ -22,11 +22,11 @@
 
 #Halaman ketiga
 
-1.nama mempelai
+1. nama mempelai
 
-2.nama orangtua mempelai
+2. nama orangtua mempelai
 
-3.tanggal acara
+3. tanggal acara
 
 4. jam akad
 
