@@ -1,28 +1,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!DOCTYPE html>
 <html>
-<linl rel="stylesheet" href="style.css">
-<head> 
-    <title> Undangan Pernikahan </title>
+<head>
+    <title>Undangan Pernikahan</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!--Halaman Depan-->
-    <div>
-        <h2> Undangan Pernikahan </h2>
-        <h1> Albert <br> And <br> Selviana</h1>
-        <p> Save The Date <br> Minggu|2 Agustus 2032|14.00 WIB</p>
-        <h3> location :<br> 123 Anywhere St.. Any City, ST 12345</h3>
+    <div class="cover-page">
+        <h2>Undangan Pernikahan</h2>
+        <h1>Albert <br> And <br> Selviana</h1>
+        <p>Save The Date <br> Minggu | 2 Agustus 2032 | 14.00 WIB</p>
+        <h3>location :<br> 123 Anywhere St.. Any City, ST 12345</h3>
     </div>
-    <!--Halaman Kedua-->
-    <div>
-        <div style="display: flex; flex-direction:row;  align-content: start;">
-            <img src="denah.png" alt="Denah Lokasi" width="500" height ="500" align="Left">
-            <img src="https://c.pxhere.com/photos/c2/13/photo-97009.jpg!d" srcset="https://c.pxhere.com/photos/c2/13/photo-97009.jpg!d" alt="Foto Mempelai" width="600" height="600" align="Right">
+
+    <!--Halaman Kedua - Seluruhnya dalam satu halaman-->
+    <div class="page-two">
+        <!-- Bagian 1: Foto Mempelai -->
+        <div class="page-two-section-one">
+            <div class="bride-groom-container">
+                <div class="photo-left">
+                    <img src="https://c.pxhere.com/photos/c2/13/photo-97009.jpg!d" alt="Foto Mempelai Pria">
+                </div>
+                <div class="center-content">
+                    <h2>Kepada</h2>
+                    <p class="guest-greeting">Bapak/Ibu/Saudara/i</p>
+                    <p>Dengan memohon rahmat dan ridho Tuhan Yang Maha Esa, kami bermaksud menyelenggarakan acara pernikahan putra-putri kami. Oleh karena itu, dengan segala kerendahan hati kami mengundang Bapak/Ibu/Saudara/i untuk berkenan hadir serta memberikan doa restu pada acara pernikahan yang akan kami laksanakan.</p>
+                    <br>
+                    <h2>Lokasi Acara</h2>
+                    <img src="denah.png" alt="Denah Lokasi">
+                </div>
+                <div class="photo-right">
+                    <img src="https://c.pxhere.com/photos/c2/13/photo-97009.jpg!d" alt="Foto Mempelai Wanita">
+                </div>
+            </div>
         </div>
     </div>
-        <!--Halaman Ketiga-->
-    <div>
 
+    <!--Halaman Ketiga-->
+    <div class="page-three">
     </div>
 </body>
 </html>
