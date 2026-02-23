@@ -1,0 +1,21 @@
+body {
+    background-color: #3CB371;
+}
+
+h2 {
+    text-align: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+p{
+    text-align: center;
+    color: blueviolet;
+    font-family: 'Times New Roman', Times, serif;
+}

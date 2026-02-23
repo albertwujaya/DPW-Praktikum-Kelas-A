@@ -4,16 +4,16 @@
 
 ## Halaman Depan
 
-1. Judul acara
-2. Nama mempelai
-3. Tanggal acara
-4. alamat
+1. Judul acara✅
+2. Nama mempelai✅
+3. Tanggal acara✅
+4. alamat✅
 
 # Halaman kedua
 
-1. Denah lokasi
+1. Denah lokasi✅
 2. nama Penerima
-3. foto mempelai
+3. foto mempelai✅
 4. kata pengantar
 
 # Halaman ketiga
