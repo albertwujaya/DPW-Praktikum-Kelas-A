@@ -1,21 +1,414 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background-color: #3CB371;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    background: linear-gradient(135deg, #f5e6d3 0%, #e8d4c4 100%);
+    color: #4a4a4a;
+    line-height: 1.6;
+}
+
+/* ===== HALAMAN DEPAN - COVER ===== */
+.cover-page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #faf6f0 0%, #f0e6d2 100%);
+    border: 8px solid #d4af91;
+    border-radius: 15px;
+    padding: 60px 40px;
+    text-align: center;
+    position: relative;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.15),
+        inset 0 0 30px rgba(212, 175, 145, 0.3),
+        0 0 0 2px #c99970;
+    margin: 20px;
+}
+
+.cover-page::before {
+    content: "✿ ✿ ✿";
+    position: absolute;
+    top: 30px;
+    font-size: 24px;
+    color: #d4af91;
+    letter-spacing: 10px;
+}
+
+.cover-page::after {
+    content: "✿ ✿ ✿";
+    position: absolute;
+    bottom: 30px;
+    font-size: 24px;
+    color: #d4af91;
+    letter-spacing: 10px;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 72px;
+    color: #6b5b4f;
+    margin: 20px 0 40px 0;
+    font-weight: 700;
+    line-height: 1.2;
+    text-shadow: 
+        3px 3px 6px rgba(0, 0, 0, 0.1),
+        0 0 20px rgba(212, 175, 145, 0.3);
 }
 
 h2 {
-    text-align: center;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    letter-spacing: 4px;
+    color: #9d8b7e;
+    margin-bottom: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
 }
 
-h1 {
-    text-align: center;
-    color: white;
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 50px;
+h3 {
+    font-family: 'Lora', serif;
+    font-size: 14px;
+    color: #9d8b7e;
+    margin-top: 40px;
+    font-weight: 400;
+    letter-spacing: 1px;
 }
-p{
+
+p {
+    font-family: 'Lora', serif;
+    font-size: 16px;
+    color: #8b7d72;
+    letter-spacing: 1px;
+}
+
+.cover-page > p {
+    margin: 20px 0;
+    letter-spacing: 2px;
+    font-style: italic;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== HALAMAN KEDUA - WRAPPER ===== */
+.page-two {
+    background: linear-gradient(135deg, #fef9f3 0%, #f5e6d3 100%);
+    border: 8px solid #d4af91;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.15),
+        inset 0 0 30px rgba(212, 175, 145, 0.3),
+        0 0 0 2px #c99970;
+    overflow: visible;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0;
+}
+
+/* ===== HALAMAN KEDUA - BAGIAN 1: FOTO MEMPELAI ===== */
+.page-two-section-one {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid #d4af91;
+    resize: vertical;
+    overflow: auto;
+    min-height: 300px;
+    background: linear-gradient(135deg, #fef9f3 0%, #f5e6d3 100%);
+}
+
+.bride-groom-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.photo-left, .photo-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 250px;
+}
+
+.photo-left img, .photo-right img {
+    width: 350px;
+    height: 600px;
+    border: 12px solid #d4af91;
+    border-radius: 8px;
+    box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.2),
+        0 0 0 1px #c99970,
+        inset 0 0 20px rgba(212, 175, 145, 0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-left img:hover, .photo-right img:hover {
+    transform: scale(1.03);
+    box-shadow: 
+        0 30px 70px rgba(0, 0, 0, 0.3),
+        0 0 0 1px #c99970,
+        inset 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.center-content {
+    flex: 1;
     text-align: center;
-    color: blueviolet;
-    font-family: 'Times New Roman', Times, serif;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.8);
+    border: 6px solid #d4af91;
+    border-radius: 10px;
+    box-shadow: 
+        0 15px 50px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 300px;
+}
+
+.center-content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #6b5b4f;
+}
+
+.guest-greeting {
+    font-size: 24px;
+    color: #9d8b7e;
+    font-style: italic;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.center-content p {
+    font-size: 16px;
+    color: #6b5b4f;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.center-content h2:last-of-type {
+    margin-top: 20px;
+    font-size: 28px;
+}
+
+.center-content img {
+    width: auto;
+    max-width: 300px;
+    height: auto;
+    border: 8px solid #d4af91;
+    border-radius: 8px;
+    box-shadow: 
+        0 15px 40px rgba(0, 0, 0, 0.15),
+        0 0 0 1px #c99970;
+    margin-top: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.center-content img:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.25),
+        0 0 0 1px #c99970;
+}
+
+/* ===== HALAMAN KEDUA - BAGIAN 2: KATA PENGANTAR ===== */
+.page-two-section-two {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid #d4af91;
+    resize: vertical;
+    overflow: auto;
+    min-height: 300px;
+    background: linear-gradient(135deg, #f5e6d3 0%, #fef9f3 100%);
+}
+
+.intro-content {
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 60px 50px;
+    border: 6px solid #d4af91;
+    border-radius: 10px;
+    box-shadow: 
+        0 15px 50px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.6);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-content p {
+    font-size: 18px;
+    line-height: 2;
+    color: #6b5b4f;
+    letter-spacing: 1.5px;
+    text-align: justify;
+}
+
+/* ===== HALAMAN KEDUA - BAGIAN 3: DENAH ACARA ===== */
+.page-two-section-three {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    resize: vertical;
+    overflow: auto;
+    min-height: 300px;
+    background: linear-gradient(135deg, #fef9f3 0%, #f5e6d3 100%);
+}
+
+.page-two-section-three h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #6b5b4f;
+}
+
+.page-two-section-three img {
+    width: auto;
+    max-width: 500px;
+    height: auto;
+    border: 12px solid #d4af91;
+    border-radius: 8px;
+    box-shadow: 
+        0 20px 50px rgba(0, 0, 0, 0.2),
+        0 0 0 1px #c99970;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-two-section-three img:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 30px 70px rgba(0, 0, 0, 0.3),
+        0 0 0 1px #c99970;
+}
+
+/* ===== HALAMAN KETIGA ===== */
+.page-three {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #f5e6d3 0%, #e8d4c4 100%);
+    border: 8px solid #d4af91;
+    border-radius: 15px;
+    margin: 20px;
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.15),
+        inset 0 0 30px rgba(212, 175, 145, 0.3);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .bride-groom-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .photo-left, .photo-right {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .photo-left img, .photo-right img {
+        width: 200px;
+        height: 300px;
+    }
+
+    .center-content {
+        min-width: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .center-content h2 {
+        font-size: 28px;
+    }
+
+    .guest-greeting {
+        font-size: 18px;
+    }
+
+    .photo-left img, .photo-right img {
+        width: 150px;
+        height: 250px;
+    }
+
+    .intro-content {
+        padding: 40px 30px;
+    }
+
+    .intro-content p {
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .page-two-section-three img {
+        max-width: 100%;
+    }
+
+    .center-content img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 36px;
+    }
+
+    .center-content h2 {
+        font-size: 22px;
+    }
+
+    .photo-left img, .photo-right img {
+        width: 120px;
+        height: 200px;
+    }
+
+    .intro-content p {
+        font-size: 14px;
+    }
+
+    .page-two-section-one,
+    .page-two-section-two,
+    .page-two-section-three {
+        padding: 20px;
+    }
+
+    .center-content {
+        padding: 15px;
+    }
 }
